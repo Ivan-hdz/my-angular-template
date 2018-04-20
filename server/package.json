@@ -1,0 +1,34 @@
+{
+  "name": "hommiesoftserv",
+  "version": "1.0.0",
+  "description": "HommieSoft server",
+  "main": "./public/server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivan-hdz/HommieSoftPage.git"
+  },
+  "keywords": [
+    "solutions",
+    "webapps",
+    "desktop",
+    "app",
+    "mobile",
+    "soluciones",
+    "android",
+    "escritorio",
+    "web"
+  ],
+  "author": "O. Ivan Hdz. S.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ivan-hdz/HommieSoftPage/issues"
+  },
+  "homepage": "https://github.com/Ivan-hdz/HommieSoftPage#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

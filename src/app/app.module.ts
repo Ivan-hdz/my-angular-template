@@ -1,26 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Routes, RouterModule } from '@angular/router';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-const routes: Routes = [
-  {path: 'Inicio', component: AppComponent},
-  {path: '', redirectTo: '/Inicio', pathMatch: 'full'},
-  {path: '**', component: PageNotFoundComponent}
-];
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AuthModule} from './auth/auth.module';
+import {WYSIWYGModule} from './wysiwyg/wysiwyg.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PageNotFoundComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-    NgbModule.forRoot()
+    BrowserAnimationsModule,
+    AuthModule,
+    WYSIWYGModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

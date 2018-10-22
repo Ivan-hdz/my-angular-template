@@ -1,0 +1,38 @@
+mat-drawer-container {
+  min-height: 100vh;
+  background: transparent;
+}
+
+mat-drawer-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  white-space: normal;
+  flex-shrink: 0;
+}
+
+.ipn_img {
+  background: url("~src/assets/ipn.png") no-repeat;
+  background-size: 100% 100%;
+  width: 40px;
+  height: 85%;
+}
+
+.content {
+  ::ng-deep {
+    .container {
+      // -- mobile
+      /*min-height: calc(100vh - 64px);*/
+      // -- mobile
+
+      // --just Desktop
+      height: calc(100vh - 64px);
+      // --just Desktop
+    }
+  }
+}

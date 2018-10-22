@@ -3,12 +3,12 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 
 
-const routes: Routes = [
-  { path: 'editor', component: EditorComponent }
+export const wysiwygModuleRoutes: Routes = [
+  { path: 'editor', component: EditorComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(wysiwygModuleRoutes)],
   exports: [RouterModule]
 })
 export class WYSIWYGRoutingModule {

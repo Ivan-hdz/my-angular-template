@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="form-container">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title class="form-title-size bold">{{labels.formTitle}}</mat-card-title>
+        <mat-card-subtitle>{{labels.formSubtitle}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field color="primary">
+          <mat-label>{{labels.id}}</mat-label>
+          <input matInput [(ngModel)]="form.id" (keyup.enter)="submit()" appAutofocus
+                 placeholder="{{labels.idPlaceholder}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>{{labels.name}}</mat-label>
+          <input matInput [(ngModel)]="form.name" (keyup.enter)="submit()"
+                 placeholder="{{labels.namePlaceholder}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>{{labels.firstSurname}}</mat-label>
+          <input matInput [(ngModel)]="form.firstSurname" (keyup.enter)="submit()"
+                 placeholder="{{labels.firstSurnamePlaceholder}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>{{labels.secondSurname}}</mat-label>
+          <input matInput [(ngModel)]="form.secondSurname" (keyup.enter)="submit()"
+                 placeholder="{{labels.secondSurnamePlaceholder}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>{{labels.title}}</mat-label>
+          <input matInput [(ngModel)]="form.title" (keyup.enter)="submit()"
+                 placeholder="{{labels.titlePlaceholder}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-select placeholder="{{labels.positionPlaceholder}}">
+            <mat-option *ngFor="let position of positions" [value]="position">{{position}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button (click)="submit()" color="primary">
+          {{labels.submit}}
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

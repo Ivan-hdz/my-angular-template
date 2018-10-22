@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AngularEditorConfig} from '@kolkov/angular-editor';
+import {editorConfig, htmlEditorTemplate} from './editor.strings';
 
 
 @Component({
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./editor.component.scss']
 })
 export class EditorComponent implements OnInit {
-  constructor() { }
+  htmlContent: string;
+  conf: AngularEditorConfig;
+  constructor() {
+    this.htmlContent = htmlEditorTemplate;
+    this.conf = editorConfig;
+  }
 
   ngOnInit() {
   }

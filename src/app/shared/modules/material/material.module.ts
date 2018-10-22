@@ -12,7 +12,11 @@ import {
   MatChipsModule,
   MatButtonToggleModule,
   MatTooltipModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatToolbarModule,
+  MatSnackBarModule,
+  MatSelectModule,
+  MatSidenavModule
 } from '@angular/material';
 
 @NgModule({
@@ -29,7 +33,11 @@ import {
     MatChipsModule,
     MatButtonToggleModule,
     MatTooltipModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatToolbarModule,
+    MatSnackBarModule,
+    MatSelectModule,
+    MatSidenavModule
   ],
   declarations: []
 })

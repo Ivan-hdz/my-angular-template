@@ -3,6 +3,8 @@ import {UserService} from 'src/app/shared/services/user.service';
 import {APP_NAME} from 'src/environments/environment';
 import {Router} from '@angular/router';
 import {AuthService} from '../../services/auth.service';
+import {labels} from './login.strings';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'app-login',
@@ -11,33 +13,34 @@ import {AuthService} from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  user_id: string;
-  app_name: string;
-  profile_img: string;
-
+  labels = labels;
+  app_name = APP_NAME;
+  id: string;
+  password: string;
   constructor(
     private authService: AuthService,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private snackBar: MatSnackBar
   ) {
   }
 
   ngOnInit() {
-    this.app_name = APP_NAME;
   }
 
   submit() {
-    if (this.user_id === '') {
-      alert('Enter a valid username');
+    if (this.id === '') {
       return;
     }
-
-    this.userService.setUserData(this.user_id, this.profile_img);
+    this.showSnackBar(this.labels.snackBarMessage, this.labels.snackBarAction, 2500);
     if (!this.authService.authenticate()) {
-      alert('usuario invalido');
       return;
     }
     // this.router.navigate(['/chat']);
   }
-
+  showSnackBar(message: string, action: string, duration: number) {
+    this.snackBar.open(message, action, {
+      duration: duration
+    });
+  }
 }

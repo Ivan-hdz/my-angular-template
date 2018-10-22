@@ -1,0 +1,19 @@
+<mat-drawer-container [hasBackdrop]="true">
+  <mat-drawer #drawer [mode]="'push'">
+    <mat-nav-list style="width: 200px;">
+      <div class="item">
+        <a mat-list-item align="center" style="justify-content: center;"><span>Menú</span></a>
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <button mat-stroked-button (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+      <span>{{appName}}</span>
+      <div class="ipn_img"></div>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
